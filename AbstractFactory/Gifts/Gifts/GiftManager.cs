@@ -5,9 +5,9 @@ namespace Gifts;
 
 public class GiftManager
 {
-    private IGift _gift;
-    private IPostcard _postcard;
-    private IPackaging _packaging;
+    private readonly IGift _gift;
+    private readonly IPostcard _postcard;
+    private readonly IPackaging _packaging;
 
     public GiftManager(IGiftFactory giftFactory)
     {

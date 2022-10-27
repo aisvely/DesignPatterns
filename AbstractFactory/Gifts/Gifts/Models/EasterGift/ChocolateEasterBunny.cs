@@ -1,4 +1,6 @@
-﻿namespace Gifts.Models.EasterGift;
+﻿using Gifts.Extensions;
+
+namespace Gifts.Models.EasterGift;
 
 public class ChocolateEasterBunny : IGift
 {
@@ -7,8 +9,6 @@ public class ChocolateEasterBunny : IGift
 
     public string GiftSet(IPostcard postcard, IPackaging packaging) 
     {
-        return $"Gift: {Type} \n" +
-            $"Postcard greeting: {postcard.Greeting} \n" +
-            $"Packaging: {packaging.Type}";
+        return this.GetGiftSet(postcard, packaging);
     }
 }
